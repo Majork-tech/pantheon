@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pantheon</title>
+
+    <!--Style sheet-->
+    <style>
+            #welcome-jambotron .jumbotron .container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        
+        #welcome-jambotron .jumbotron .container img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes slideAndFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Apply animation to the image */
+        #welcome-jambotron .jumbotron .container img {
+            animation: slideAndFadeIn 1.5s ease-in-out forwards;
+        }
+
+        .custom-text-style {
+            right: 20px; /* Adjust the value as per your preference */
+            opacity: 0; /* Initially hide the text */
+            position: relative;
+            animation: slideInFromLeft 2s forwards; /* Apply animation */
+        }
+    
+        @keyframes slideInFromLeft {
+            from {
+                transform: translateX(-100%); /* Start from left */
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0); /* Slide to original position */
+                opacity: 1;
+            }
+        }
+
+        .fadeOut {
+        opacity: 0;
+        transition: opacity 0.5s ease-out;
+        
+    }
+
+    section {
+            margin-top: 50px; /* Adjust as needed */
+        }
+
+    #about-heading {
+        border: 1px solid #ccc;
+        margin: 20px 40px;
+        text-align: center;
+        width: fit-content;
+        margin: 0 auto;
+        margin-bottom: 20px;
+            
+        }
+
+    .lead {
+       text-align: justify; /* Justify the text within the paragraph */
+       border: 2px; /* Thick blue border */
+       padding: 20px; /* Adjust padding for spacing */
+       margin: 0 auto; /* Center the box horizontally */
+       width: fit-content; /* Adjust width if needed */
+  /* Optional: Add a background color if desired */
+}
+
+#animatedText.lead{
+    text-size-adjust: 40px;
+}
+
+.contact-form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px auto;
+            max-width: 600px; /* Adjust as needed */
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 48%; /* Adjust width for each input/textarea */
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .contact-form textarea {
+            height: 100px; /* Adjust height for textarea */
+        }
+
+        .contact-form button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .contact-form button:hover {
+            background-color: #45A049; /* Green hover effect */
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+           width: 70%; /* Adjust as needed */
+           padding: 10px;
+           margin-bottom: 10px;
+           border: 1px solid #ccc;
+           border-radius: 4px;
+           box-sizing: border-box;
+        }
+
+.contact-form textarea {
+    height: 150px; /* Adjust height for textarea */
+}
+
+.center-text {
+  text-align: center;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Add other styling for your navbar here */
+  background-color: #fff; /* Initial background color */
+  transition: background-color 0.3s ease-in-out;
+}
+
+
+
+
+
+        
+        
+       
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <!--Navbar-->
+    <section id="navbar">
+        <div id="navbar">
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #93B6D2;">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link"href="#about" data-bs-offset="-70">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#core-values" data-bs-offset="-70">Core Values</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#services" data-bs-offset="-70">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-us" data-bs-offset="-70">Contact</a>
+                      </li>
+                  </ul>
+                </div>
+              </nav>
+        </div>
+    </section>
+
+    <!--Welcome Jambotron-->
+    <section id="welcome-jambotron">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container position-relative d-flex justify-content-center align-items-center">
+                <img src="Business Pantheon-1.jpg" class="img-fluid" alt="image">
+                <div class="position-absolute text-right text-white custom-text-style">
+                    <h1 class="display-4">Contact us on:</h1>
+                    <p class="lead">071 234 5678 | 011 222 333</p>
+                    <p class="lead">info@pantheon.co.za</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--About Heading-->
+    <section id="about">
+        <div class="container">
+            <h1 id="about-heading">About</h1>
+        
+            <section id="about-jambotron">
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container position-relative d-flex justify-content-center align-items-center">
+                        <img src="Business Pantheon-4.jpg" class="img-fluid" alt="image">
+                        <div class="position-absolute text-right text-black custom-text-style">
+                            <p class="lead">Pantheon Con. was established in 2023 by two innovative individuals with nothing but a drive for excellence and passion for producing and providing high quality services in the business industry. 
+                                Pantheon is a 100% black owned and directed company which offers a complete range of plumbing and sanitation services to cater to clients needs and exceed industry standards. 
+                                We aim to offer full transparency with our clients, pursue and attain internationally recognized qualifications within the building services industry, but most importantly develop to a point of claiming the title of industry leader, thus making Pantheon more than just a business but should be portrayed as an entity which sets an example of how companies should strive to provide and archive top-notch  workmanship and ethical conduct. 
+                                </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class=""></div>
+    </section>
+
+    <!--Core Values section-->
+    <section id="core-values">
+        <div class="container">
+            <h1 id="about-heading">Core Values</h1>
+     <section id="core-values-jambotron">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container position-relative d-flex justify-content-center align-items-center" style="height: 100vh;">
+                <!-- Embed your MP4 video here -->
+                <img src="Business Pantheon-4.jpg" class="img-fluid" alt="image"> <!-- Added 'img-fluid' class -->
+                <div class="position-absolute text-center text-black">
+                    <h2 id="animatedText" class="lead" style="font-size: 3em;"></h2>
+                </div>
+            </div>
+        </div>
+     </section>    
+    </section>
+
+    <!--Services-->
+
+    <section id="services">
+        <div class="container">
+            <h1 id="about-heading">Services</h1>
+
+    <section id="services-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card text-center">
+                        <img class="card-img-top mx-auto" src="faucet_3445696.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">To design, install and maintain healthy consumer-friendly water supply.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card text-center">
+                        <img class="card-img-top mx-auto" src="urban_2875948.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">To design, as well as the installation and maintenance of waste removal systems to combat waste water issues, control sewers, and the conversion of water.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card text-center">
+                        <img class="card-img-top mx-auto" src="go-green_12426350.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">To protect the health and safety of consumers, as well as the environment by conforming with SLAs and government environmental standards and ensuring quality workmanship in our services.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     </section>
+
+     <!--Contact form-->
+     <section id="contact-us">
+        <div class="container">
+            <h1 id="about-heading">Contact us</h1>
+            <p class="center-text">Get in touch and we will get back to you!</p>
+
+     </section>
+
+     <form class="contact-form" action="your_form_processing_script.php" method="post">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="text" name="surname" placeholder="Surname" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="tel" name="cell_number" placeholder="Cell Number" required>
+        <textarea name="query" placeholder="Enter your query here" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+
+    <footer class="text-center py-3" style="background-color: #93B6D2;">
+        <p>&copy; 2024 Pantheon Con. All Rights Reserved.</p>
+        <a href="#">Terms of Services</a> | 
+        <a href="#">Privacy Policy</a> | 
+        <a href="#">Website Designed by HAILE pty (LTD)</a>
+      </footer>
+
+    
+
+
+   
+  </body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script>
+    const textElement = document.getElementById('animatedText');
+    const texts = ["Build an undisputable reputation in the plumbing and building services industry.", "Global expansion in the field of plumbing and building services.", "Increase the equity and assets of P.G to support the development and sustainability of the business.", "Change the common negative perception of what ‘trades people’ are portrayed as and said to be to a more positive perception."]; // Add your paragraphs here
+    let index = 0;
+
+    function animateText() {
+        textElement.textContent = texts[index];
+        index = (index + 1) % texts.length;
+
+        setTimeout(() => {
+            textElement.classList.add('fadeOut');
+            setTimeout(() => {
+                textElement.classList.remove('fadeOut');
+                animateText();
+            }, 500); // Adjust the duration of text disappearance
+        }, 3000); // Adjust the duration of each paragraph appearance
+    }
+
+    animateText();
+</script>
+
+
+
+
+</html>
